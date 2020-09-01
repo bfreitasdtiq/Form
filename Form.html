@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+   
+    <title>Form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      margin: 15px 0;
+      font-weight: 400;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px #ccc; 
+      }
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+      input:hover, select:hover, textarea:hover {
+      outline: none;
+      border: 1px solid #095484;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      select {
+      width: 100%;
+      padding: 7px 0;
+      background: transparent;
+      }
+      textarea {
+      width: calc(100% - 6px);
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      input[type="date"]::-webkit-inner-spin-button {
+      display: none;
+      }
+      .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      font-size: 20px;
+      color: #a9a9a9;
+      }
+      .item i {
+      right: 2%;
+      top: 30px;
+      z-index: 1;
+      }
+      [type="date"]::-webkit-calendar-picker-indicator {
+      right: 1%;
+      z-index: 2;
+      opacity: 0;
+      cursor: pointer;
+      }
+      .btn-block {
+      margin-top: 20px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px; 
+      -moz-border-radius: 5px; 
+      border-radius: 5px; 
+      background-color: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background-color: #0666a3;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="testbox">
+          <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+<input type=hidden name="orgid" value="00Dj0000000HpvU">
+<input type=hidden name="retURL" value="http://">
+        <h1>Form</h1>
+        <div class="item">
+          <p>Your name</p>
+          <div>
+            <input type="text" name="name" placeholder="First" />
+            <input type="text" name="name" placeholder="Last" />
+          </div>
+        </div>
+        <div class="item">
+          <p>Contact</p>
+          <input type="text" name="name"/>
+        </div>
+        <div class="item">
+          <p>Company</p>
+          <input type="text" name="Company" required/>
+                                        <p>Store Number</p>
+          <input type="text" name="StoreNumber" required/>
+         
+                    <p>Email</p>
+          <input type="text" name="Email" required/>
+          
+                    <p>Phone</p>
+          <input type="text" name="Phone" required/>
+          
+                    <p>Subject</p>
+          <input type="text" name="Subject" required/>
+         
+                              <p>Description</p>
+          <input type="text" name="description" required/>
+          &nbsp;</div>
+        <div class="item">
+          <p>Type</p>
+          <select>
+<option value="none">--None--</option>
+<option value="Change of Ownership">Change of Ownership</option>
+<option value="Customer Inquiry">Customer Inquiry</option>
+<option value="Reinstallation Request">Reinstallation Request</option>
+<option value="Threat to Cancel">Threat to Cancel</option>
+<option value="Upgrade Opportunity">Upgrade Opportunity</option>
+          </select>
+        </div>
+        <div class="item">
+          <label for="reason">Case Reason</label><select  id="reason" name="reason"><option value="">--None--</option><option value="CHANGE OF OWNERSHIP - IN">CHANGE OF OWNERSHIP - IN</option>
+<option value="CHANGE OF OWNERSHIP - OUT">CHANGE OF OWNERSHIP - OUT</option>
+<option value="Customer Needs PCI Server Upgrade">Customer Needs PCI Server Upgrade</option>
+<option value="I closed my store">I closed my store</option>
+<option value="I moved my store">I moved my store</option>
+<option value="I sold my store">I sold my store</option>
+<option value="I want to add cameras - Upgrade">I want to add cameras - Upgrade</option>
+<option value="I want to add Services">I want to add Services</option>
+<option value="I want to cancel my stores">I want to cancel my stores</option>
+<option value="NON-RENEWAL">NON-RENEWAL</option>
+<option value="The server/camera is down">The server/camera is down</option>
+<option value="When is my contract up?">When is my contract up?</option>
+<option value="Other">Other</option>
+</select><br>
+        </div>
+        <p>Case Reason other</p>
+          <input type="text" name="Other"/>
+        <div class="item">
+        </div>
+        <div class="item">
+          Cancellation Reason:<select  id="00N3a00000CVVZO" name="00N3a00000CVVZO" title="Cancellation Reason"><option value="">--None--</option><option value="Closed Location">Closed Location</option>
+<option value="Competition">Competition</option>
+<option value="COVID-19">COVID-19</option>
+<option value="Did Not See Value">Did Not See Value</option>
+<option value="End Of Contract">End Of Contract</option>
+<option value="Financial Hardship">Financial Hardship</option>
+<option value="LP Locations Remodel">LP Locations Remodel</option>
+<option value="Store Sold/New Owner">Store Sold/New Owner</option>
+<option value="Store Sold/Old Owner">Store Sold/Old Owner</option>
+<option value="Technology Deficiency">Technology Deficiency</option>
+<option value="Too Expensive">Too Expensive</option>
+</select><br>
+        </div>
+        <div class="item">
+<input type="submit" name="submit">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
